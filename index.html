@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cifrado MD5 - Daniel 7A DGS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>SISTEMA DE CIFRADO MD5</h1>
+
+    <div class="form-container">
+        <form>
+            <input id="input" type="text" required placeholder="Ingrese una cadena de texto...">
+            <button id="encriptar" type="submit">ENCRIPTAR</button>
+        </form>
+    </div>
+
+    <h2>RESULTADO</h2>
+    <div class="result">
+        <span id="hash-span"></span>
+    </div>
+
+    <div class="credits">
+        <p>Hecho por Daniel Espíndola - 7A DGS</p>
+    </div>
+    <script type="text/javascript" src="md5.min.js"></script>
+    <script>
+
+        const button = document.getElementById("encriptar"),
+            input = document.getElementById("input"),
+            result = document.getElementById("hash-span");
+        document.addEventListener("click", (e) => {
+            if (e.target === button) {
+                e.preventDefault();
+
+                if (input.value.trim() === "") {
+                    return alert("Ingrese un texto por favor");
+                }
+
+                let strHash = md5(input.value);
+                result.innerText = strHash;
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    background-color: #fff;
+    color: #434343;
+    font-family: sans-serif;
+}
+
+
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.form-container {
+    width: 80%;
+    height: auto;
+    margin: 1rem auto;
+    padding: 1.5rem 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+form>input {
+    width: 80%;
+    font-size: 1.3rem;
+    padding: .8rem 1.44rem;
+    border: 1px solid #434343;
+    outline: none;
+    border-radius: 20px;
+}
+
+
+form>button {
+    margin: 2rem auto 1rem;
+    font-size: 1rem;
+    padding: .8rem 2.8rem;
+    border-radius: 20px;
+    background-color: #434343;
+    color: #fff;
+    outline: none;
+    border: 1px solid #434343;
+    transition: .3s;
+    cursor: pointer;
+}
+
+form>button:hover {
+    background-color: #fff;
+    color: #434343;
+}
+
+h2 {
+    font-size: 2.3rem;
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+
+.result {
+    width: 60%;
+    height: 8rem;
+    margin: 1rem auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    padding: .7rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.result span {
+    font-size: 1.2rem;
+    text-overflow: ellipsis;
+}
+
+.credits {
+    margin: 2rem auto .5rem;
+    width: 40%;
+    height: 2.5rem;
+    background-color: #434343;
+    border: 1px solid #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.credits p {
+    color: #fff;
+    font-size: .7rem;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-container {
+        width: 95%;
+    }
+
+    form>input {
+        width: 100%;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    .credits {
+
+        width: 80%;
+    }
+}
